@@ -7,5 +7,6 @@
   "author": {
     "name": "Aaron Hardy"
   },
-  "viewBasePath": "src/view/"
+  "viewBasePath": "src/view/",
+  "main": "src/lib/main.js"
 }
