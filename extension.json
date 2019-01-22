@@ -7,5 +7,17 @@
   "author": {
     "name": "Aaron Hardy"
   },
-  "viewBasePath": "src/view/"
+  "viewBasePath": "src/view/",
+  "actions": [
+    {
+      "displayName": "Load Library",
+      "name": "load-library",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/loadLibrary.js"
+    }
+  ]
 }
