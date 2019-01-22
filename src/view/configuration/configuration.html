@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Extension Configuration</title>
+
+  </head>
+  <body>
+    <label>
+      Tag ID:
+      <input id="tagId">
+    </label>
+
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      var tagIdInput = document.getElementById('tagId');
+
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            tagIdInput.value = info.settings.tag_id;
+          }
+        },
+
+        getSettings: function() {
+          return {
+            tag_id: tagIdInput.value
+          };
+        },
+
+        validate: function() {
+          // TODO: Add proper validation
+          return true;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -19,5 +19,13 @@
       },
       "libPath": "src/lib/actions/loadLibrary.js"
     }
-  ]
+  ],
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {}
+    }
+  }
 }

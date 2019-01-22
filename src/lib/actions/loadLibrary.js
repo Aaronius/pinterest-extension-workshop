@@ -15,7 +15,7 @@ module.exports = function() {
     script.src = scriptUrl;
     var firstScriptInPage = document.getElementsByTagName("script")[0];
     firstScriptInPage.parentNode.insertBefore(script, firstScriptInPage);
-    pintrk('load', 'YOUR_TAG_ID');
+    pintrk('load', turbine.getExtensionSettings().tag_id);
     pintrk('page');
   }
 };
