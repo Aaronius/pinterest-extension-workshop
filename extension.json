@@ -1,0 +1,11 @@
+{
+  "displayName": "Pinterest Conversion Tag",
+  "name": "pinterest-conversion-tag",
+  "platform": "web",
+  "version": "1.0.0",
+  "description": "The Pinterest tag allows you to track actions people take on your website after viewing your Promoted Pin.",
+  "author": {
+    "name": "Aaron Hardy"
+  },
+  "viewBasePath": "src/view/"
+}
