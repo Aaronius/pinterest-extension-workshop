@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Action</title>
+  </head>
+  <body>
+    <label>
+      Value:
+      <input id="value">
+    </label>
+
+    <label>
+      Order Quantity:
+      <input id="orderQuantity">
+    </label>
+
+    <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
+    <script>
+      var valueTextfield = document.getElementById('value');
+      var orderQuantityTextfield = document.getElementById('orderQuantity');
+
+      window.extensionBridge.register({
+        init: function(info) {
+          if (info.settings) {
+            valueTextfield.value = info.settings.value;
+            orderQuantityTextfield.value = info.settings.order_quantity;
+          }
+        },
+
+        getSettings: function() {
+          return {
+            value: valueTextfield.value,
+            order_quantity: orderQuantityTextfield.value
+          }
+        },
+
+        validate: function() {
+          // TODO: Add proper validation
+          return true;
+        }
+      });
+    </script>
+  </body>
+</html>

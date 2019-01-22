@@ -18,6 +18,17 @@
         "properties": {}
       },
       "libPath": "src/lib/actions/loadLibrary.js"
+    },
+    {
+      "displayName": "Checkout",
+      "name": "checkout",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "libPath": "src/lib/actions/checkout.js",
+      "viewPath": "actions/checkout.html"
     }
   ],
   "configuration": {
