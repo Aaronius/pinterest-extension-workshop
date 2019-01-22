@@ -19,5 +19,8 @@
       },
       "libPath": "src/lib/actions/loadLibrary.js"
     }
+  ],
+  "hostedLibFiles": [
+    "src/lib/vendor/pinterest.js"
   ]
 }

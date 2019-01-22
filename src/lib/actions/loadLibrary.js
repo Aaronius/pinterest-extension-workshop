@@ -2,7 +2,7 @@
 
 module.exports = function() {
   if (!window.pintrk) {
-    var scriptUrl = "https://s.pinimg.com/ct/core.js";
+    var scriptUrl = turbine.getHostedLibFileUrl("pinterest.js");
     window.pintrk = function () {
       window.pintrk.queue.push(
         Array.prototype.slice.call(arguments))
