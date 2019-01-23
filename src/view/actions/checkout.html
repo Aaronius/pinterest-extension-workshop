@@ -8,11 +8,13 @@
     <label>
       Value:
       <input id="value">
+      <button onclick="selectDataElement('value')">Select Data Element</button>
     </label>
 
     <label>
       Order Quantity:
       <input id="orderQuantity">
+      <button onclick="selectDataElement('orderQuantity')">Select Data Element</button>
     </label>
 
     <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
@@ -40,6 +42,12 @@
           return true;
         }
       });
+
+      function selectDataElement(inputId) {
+        window.extensionBridge.openDataElementSelector().then(function(token) {
+          document.getElementById(inputId).value = token;
+        });
+      }
     </script>
   </body>
 </html>
